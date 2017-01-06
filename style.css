@@ -1,0 +1,69 @@
+.header {
+  width: 100%;
+  background-color: grey;
+  border-radius: 7px;
+  height: 100px;
+}
+.logo {
+  width: 25%;
+  height: 100%;
+  display: inline;
+  float: left;
+}
+.mid {
+  width: 50%;
+  display: inline-block;
+  /*float: right;*/
+  height: 100px;
+}
+.account {
+  width: 25%;
+  height: 100px;
+  float: right;
+}
+.search {
+  width: 200px;
+  margin-left: 102px;
+  height: 25px;
+  border: 0px;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    font-size: 11px;
+    padding: 6px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    border: 0px;
+}
+.bregister {
+  background-color: red;
+  border-radius: 6px;
+  float: right;
+  height: 50%;
+  font-size: 15px;
+  width: 30%;
+border: 0px;
+  vertical-align: middle;
+  text-align: center;
+}
+.bconnection {
+  background-color: red;
+  height: 50%;
+  font-size: 15px;
+  float: right;
+  vertical-align: middle;
+  border-radius: 6px;
+  text-align: center;
+  width: 30%;
+  border: 0px;
+
+}
+img {
+  margin-left: 5px;
+}
