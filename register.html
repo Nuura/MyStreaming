@@ -1,21 +1,28 @@
+<?php
+require_once("register.php");
+ ?>
 <html>
   <head>
-      <title>InstaStream</title>
+      <title>VidStream</title>
       <link rel="stylesheet" type="text/css" href="style.css">
   </head>
 
-  <body>
-    <div class="header">
-      <div class="logo">
-        <img src="vidstream.png">
-      </div>
-      <div class="mid">
-        <input class="search" type="text" name="search" placeholder="Search..">
-        <a href="#" class="button">Search</a>
-      </div>
+  <body class="bodyregi">
+    <div class="regi">
+    <img src="vidstream.png">
+    <h3>Inscription</h3>
+    <form action="register.php" method="post">
+      <label for="lastname">Nom</label><br>
+      <input type="text" name="lastname" class="iregi"><br><br>
+      <label for="firstname">Prenom</label><br>
+      <input type="text" name="firstname" class="iregi"><br><br>
+      <label for="username">Pseudo</label><br>
+      <input type="text" name="Username" class="iregi"><br><br>
+      <label for="password">Mot de passe</label><br>
+      <input type="text" name="password" class="iregi"><br><br>
+      <label for="confirmpassword">Confirmer votre Mot de passe</label><br>
+      <input type="text" name="confirmpassword" class="iregi"><br>
+      <input type="submit" name="sregi" value="S'inscrire" class="sregi"></input>
+    </form>
     </div>
   </body>
-
-</html>
-
-<!--  The content of the document...... -->

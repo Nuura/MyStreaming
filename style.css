@@ -67,3 +67,17 @@ border: 0px;
 img {
   margin-left: 5px;
 }
+.bodyregi {
+  width: 100%;
+  background-color: grey;
+}
+.regi {
+  width: 50%;
+  height: 500px;
+  border-radius: 5px;
+  opacity: 1;
+  background-color: white;
+  text-align: center;
+  margin: auto;
+  margin-top: 10px;
+}

@@ -1,9 +1,6 @@
-<html>
-  <head>
-      <title>VidStream</title>
-      <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-
-  <body>
-
-  </body>
+<?php
+    if(isset($_POST[sregi]))
+      {
+        echo "hello guys";
+      }
+?>
