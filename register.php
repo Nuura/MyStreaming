@@ -1,5 +1,6 @@
 <?php
-    if(isset($_POST[sregi]))
+require_once 'register.html';
+    if(isset($_POST['sregi']))
       {
         echo "hello guys";
       }
