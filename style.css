@@ -81,3 +81,13 @@ img {
   margin: auto;
   margin-top: 10px;
 }
+.connec {
+  width: 50%;
+  height: 350px;
+  border-radius: 5px;
+  opacity: 1;
+  background-color: white;
+  text-align: center;
+  margin: auto;
+  margin-top: 10px;
+}
