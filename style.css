@@ -111,10 +111,13 @@ body.bodychos {
   /*float: right;*/
   margin: 10px;
   width: 98%;
-  background-color: blue;
+  background-color: blue
 }
 .ecrit {
-  width: 70%;
+  width: calc(100% - 215px);
   height: 200px;
+}
+.contenu * {
   display: inline;
+  vertical-align: top;
 }
