@@ -57,4 +57,5 @@ $error = 0;
 		            $request->execute(array($_POST['username'], $_POST['lastname'], $_POST['firstname'], sha1($_POST['password'])));
 	      }
       }
+      echo "</div>";
 ?>
