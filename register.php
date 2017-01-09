@@ -1,17 +1,17 @@
 <?php
 require_once('register.html');
 $error = 0;
-      if(!isset($_POST['lastname']))
+      if(empty($_POST['lastname']))
       {
         echo "Veuillez renseigner votre Nom.";
         $error += 1;
       }
-      if(!isset($_POST['firstname']))
+      if(empty($_POST['firstname']))
       {
         echo "Veuillez renseigner votre Prenom.";
         $error += 1;
       }
-      if(!isset($_POST['username']))
+      if(empty($_POST['username']))
       {
         echo "Veuillez renseigner votre Pseudo.";
         $error += 1;
@@ -20,7 +20,7 @@ $error = 0;
       {
 	echo "Votre Pseudo ne doit pas contenir plus de 10 caracteres";
       }
-      if(!isset($_POST['password']))
+      if(empty($_POST['password']))
       {
         echo "Veuillez renseigner votre Mot de Passe.";
         $error += 1;
@@ -29,7 +29,7 @@ $error = 0;
       {
         echo "Le mot de passe doit comporter entre 8 et 16 caracteres";
       }
-      if(!isset($_POST['confirmpassword']))
+      if(empty($_POST['confirmpassword']))
       {
         echo "Veuillez confirmer votre Mot de Passe.";
         $error += 1;
@@ -54,7 +54,7 @@ $error = 0;
               else
               {
                 $request = $bdd->prepare('INSERT INTO Users(username, last_name, first_name, password) VALUES (?, ?, ?, ?);');
-		$request->execute(array($_POST['username'], $_POST['lastname'], $_POST['firstname'], $_POST['password']));
+		            $request->execute(array($_POST['username'], $_POST['lastname'], $_POST['firstname'], $_POST['password']));
 	      }
       }
 ?>
