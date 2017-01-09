@@ -114,10 +114,10 @@ body.bodychos {
   background-color: blue
 }
 .ecrit {
-  width: calc(100% - 215px);
-  height: 200px;
+  width: calc(80% - 215px);
 }
 .contenu * {
-  display: inline;
+  display: inline-block;
   vertical-align: top;
+  margin: 20px;
 }
