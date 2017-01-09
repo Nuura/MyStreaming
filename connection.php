@@ -7,7 +7,7 @@ if(isset($_POST['sregi']))
     $result = $result->fetchAll();
     //for ($i=0; $i < $verif; $i++)
     //  {
-          if ($_POST['username'] == $result[$i]['username'] && $_POST['password'] == $result[$i]['password'])
+          if ($_POST['username'] == $result[$i]['username'] && sha1($_POST['password']) == $result[$i]['password'])
           {
             echo "Vous etes connecte !";
           }

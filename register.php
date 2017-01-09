@@ -54,7 +54,7 @@ $error = 0;
               else
               {
                 $request = $bdd->prepare('INSERT INTO Users(username, last_name, first_name, password) VALUES (?, ?, ?, ?);');
-		            $request->execute(array($_POST['username'], $_POST['lastname'], $_POST['firstname'], $_POST['password']));
+		            $request->execute(array($_POST['username'], $_POST['lastname'], $_POST['firstname'], sha1($_POST['password'])));
 	      }
       }
 ?>
