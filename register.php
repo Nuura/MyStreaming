@@ -40,7 +40,7 @@ $error = 0;
       }
       else if($_POST['password'] != $_POST['confirmpassword'])
       {
-        echo "Les mots de passe de correspondent pas."
+        echo "Les mots de passe de correspondent pas.";
       }
       else if($error > 1)
       {
@@ -59,7 +59,7 @@ $error = 0;
               }
               else
               {
-                $insert = "INSERT INTO Users (username, last_name, first_name, password) VALUES ($_POST['username'], $_POST['lastname'], $_POST['firstname'], $_POST['password']);";
+                $insert = "INSERT INTO Users (username, last_name, first_name, password) VALUES (". $_POST['username'] .", ". $_POST['lastname'] ." , ". $_POST['firstname'] .", ". $_POST['password'] . ");";
               }
           }
 

@@ -16,4 +16,5 @@ if(isset($_POST['sregi']))
               echo "Identifiants errones";
             }
         }
+    }
 ?>
