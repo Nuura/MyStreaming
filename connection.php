@@ -3,11 +3,10 @@ require_once ('connection.html');
 if(isset($_POST['sregi']))
   {
     $bdd = new PDO('mysql:host=localhost;dbname=Streaming;charset=utf8', 'root', 'root');
-    $result = $bdd->query("SELECT * FROM Users;");
-    $result = $result->fetchAll();
-    //for ($i=0; $i < $verif; $i++)
-    //  {
-          if ($_POST['username'] == $result[$i]['username'] && sha1($_POST['password']) == $result[$i]['password'])
+    $result = $bdd->query("SELECT * FROM Users WHERE username = '". $_POST['username'] ."' AND password = '". sha1($_POST['password'])."';");
+    $result = $result->fetch();
+
+    if ($result == true)
           {
 	    session_start();
 	    $_SESSION['pseudo'] = $_POST['username'];
@@ -15,9 +14,9 @@ if(isset($_POST['sregi']))
           }
           else
             {
+	      echo sha1($_POST['password']);
               echo "Identifiants errones";
             }
-    //  }
     }
 echo "</div>";
 ?>
