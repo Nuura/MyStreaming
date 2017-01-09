@@ -9,7 +9,9 @@ if(isset($_POST['sregi']))
     //  {
           if ($_POST['username'] == $result[$i]['username'] && sha1($_POST['password']) == $result[$i]['password'])
           {
-            echo "Vous etes connecte !";
+	    session_start();
+	    $_SESSION['pseudo'] = $_POST['username'];
+            echo "Vous etes connecte ". $_SESSION['pseudo']."!";
           }
           else
             {
@@ -17,4 +19,5 @@ if(isset($_POST['sregi']))
             }
     //  }
     }
+echo "</div>";
 ?>
