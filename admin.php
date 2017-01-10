@@ -5,7 +5,8 @@
     {
       if($_POST['Type_video'] == 'Film')
       {
-        $donnees = $bdd->prepare('INSERT INTO Films(Titre, Synopsis, Realisateur, Movie_ID, Type_video, Video_ID, maincharac, Relyear) VALUES (?, ?, ?, ?, ?, ?, ?, ?);');
+        $donnees = $bdd->prepare('INSERT INTO Films(Titre, Synopsis, Realisateur, Movie_ID, Type_video, Video_ID, maincharac, Relyear) VALUES (?, ?, ?, ?, ?, 
+?, ?, ?);');
         $donnees->execute(array($_POST['Titre'], $_POST['Synopsis'], $_POST['Realisateur'], $_POST['Movie_ID'], $_POST['Type_video'], $_POST['Video_ID'], $_POST['maincharac'], $_POST['maincharac']));
         echo "Film Ajoute !";
       }
@@ -44,7 +45,7 @@
           }
       ?>
     <div class="admin">
-      <h3 class="h3admin">Ajout d'une serie/film</h3><br>
+      <h3 class="h3admin">Ajout d'une serie/film</h3><br><br>
       <!-- <input class="iadmin"></input> -->
       <form action="admin.php" method="post">
         <label for="Titre">Titre :</label><br>

@@ -1,3 +1,10 @@
+.categories {
+    width : 100%;
+    margin-top: 20px;
+    border-radius:7px;
+    background-color: grey;
+    font-size: 24px;
+}
 .header {
   position: relative;
   width: 100%;
@@ -5,6 +12,16 @@
   border-radius: 7px;
   height: 100px;
   display: flex;
+}
+.footer {
+    width: 100%;
+    border-radius:7px;
+    background-color: grey;
+    margin-top: 10px;
+    height: 100px;
+}
+.pfooter {
+    text-align:center;
 }
 .logo {
   width: 25%;
@@ -98,7 +115,7 @@ h3.synopsisnews {
   background-color: grey;
 }
 .bregister {
-  background-color: red;
+  background-color: white;
   border-radius: 6px;
   float: right;
   height: 50%;
@@ -109,7 +126,7 @@ border: 0px;
   text-align: center;
 }
 .bconnection {
-  background-color: red;
+  background-color: white;
   height: 50%;
   font-size: 15px;
   float: right;
@@ -159,7 +176,7 @@ body.bodychos {
   margin-top: 10px;
   background-color: grey;
   width: 100%;
-  height: 500px;
+  height: 650px;
   border-radius: 5px;
   display: inline-block;
   vertical-align: top;
@@ -169,13 +186,13 @@ body.bodychos {
   margin-left: 10px;
 }
 .contenu {
-  /*float: right;*/
+    border-radius:7px;
     margin: 10px;
     padding-bottom:10px;
-  width: 98%;
-  background-color: white;
-  display: inline-block;
-  vertical-align: top;
+    width: 98%;
+    background-color: white;
+    display: inline-block;
+    vertical-align: top;
 }
 .comment {
   background-color: grey;
@@ -213,7 +230,7 @@ body.bodychos {
   font-size: 20px;
 }
 .ecrit {
-  width: calc(90% - 215px);
+
 }
 .contenu * {
   display: inline-block;

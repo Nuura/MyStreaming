@@ -1,5 +1,6 @@
 <?php
 require_once('register.html');
+session_start();
 $error = 0;
 if(isset($_POST['sregi']))
   {

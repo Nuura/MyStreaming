@@ -1,5 +1,6 @@
 <?php
 require_once ('connection.html');
+session_start();
 if(isset($_POST['sregi']))
   {
     $bdd = new PDO('mysql:host=localhost;dbname=Streaming;charset=utf8', 'root', 'root');

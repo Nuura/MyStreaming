@@ -19,8 +19,9 @@ if(isset($_SESSION['pseudo'])) //Si connecté
 else //Pas Connecté
   {
     echo "<div class=account>";
-    echo "<a href=register.php class=bregister>Inscription</a>";
+    echo "<a href=categories.php class=bregister>Categories</a>";
     echo "<a href=connection.php class=bconnection>Connexion</a>";
+    echo "<a href=register.php class=bregister>Inscription</a>";
     echo "</div>";
     echo "</div>";
     echo "Vous n'êtes pas connecté ! <a href=register.php>S'inscrire ?</a> ";
@@ -57,4 +58,15 @@ else //Pas Connecté
     echo "</div><br>";
   }
   echo "</div>";
+if(isset($_POST['search']))
+  {
+    $bdd = new PDO('mysql:host=localhost;dbname=Streaming;charset=utf8', 'root', 'root');
+    $sql = "SELECT * FROM Films LIKE Titre = %".$_POST['isearch']."%";
+    $donnees = $bdd->execute($sql);
+    var_dump($donnees);
+  }
+echo "<div class=footer>
+      <br><a href=mailto:sanche_p@etna-alternance.net>Contact </a>
+      <br><br><p class=pfooter>Copyright sanche_p  ©</p>
+     </div>";
 ?>
