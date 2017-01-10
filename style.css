@@ -12,6 +12,7 @@
   float: left;
 }
 .mid {
+  width: calc(100% - 312px);
   width: 30%;
   height: 100px;
 }
