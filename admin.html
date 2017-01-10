@@ -1,0 +1,33 @@
+<html>
+  <head>
+      <title>VidStream</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="logo">
+        <img src="vidstream.png">
+      </div>
+      <div class="mid">
+        <input class="search" type="text" name="search" placeholder="Search..">
+        <input href="#" type="submit" class="button">
+      </div>
+      <?php
+      session_start();
+      require_once('admin.html');
+
+      if(isset($_SESSION['pseudo'])) //Si connecté
+        {
+          echo "<div class=account>";
+          echo "<p class=getlogin>Connecte en tant que ".$_SESSION['pseudo']."</p>";
+          echo "<a href=disconnect.php class=bregister>Deconnection</a>";
+          echo "<a href=categories.php class=bregister>Categories</a>";
+          echo "<a href=admin.php class=bregister>Panel Admin<br>".$_SESSION['pseudo']."</a></div>";
+
+          }
+      ?>
+    <div class="admin">
+      42
+    </div>
+  </html>

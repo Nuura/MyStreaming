@@ -11,7 +11,7 @@ if(isset($_SESSION['pseudo'])) //Si connecté
     echo "<p class=getlogin>Connecte en tant que ".$_SESSION['pseudo']."</p>";
     echo "<a href=disconnect.php class=bregister>Deconnection</a>";
     echo "<a href=categories.php class=bregister>Categories</a>";
-    if($result['role'] == "1")
+    if($result['role'] == "0")
       echo "<a href=admin.php class=bregister>Panel Admin<br>".$_SESSION['pseudo']."</a>";
     echo "</div>";
     echo "</div></body>";
