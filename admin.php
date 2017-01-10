@@ -3,20 +3,17 @@
   $bdd = new PDO('mysql:host=localhost;dbname=Streaming;charset=utf8', 'root', 'root');
   if(isset($_POST['sregi']))
     {
-      echo "lol";
-      echo $_POST['Type_video'];
       if($_POST['Type_video'] == 'Film')
       {
-        echo "lal";
-        $donnees = $bdd->prepare('INSERT INTO Films(Titre, Synopsis, Realisateur, Movie_ID, Type_video, Video_ID, maincharac,) VALUES (?, ?, ?, ?, ?, ?, ?);');
-        echo "lul";
-        $donnees->execute(array($_POST['Titre'], $_POST['Synopsis'], $_POST['Realisateur'], $_POST['Movie_ID'], $_POST['Type_video'], $_POST['Video_ID'], $_POST['maincharac']));
-        echo "success";
+        $donnees = $bdd->prepare('INSERT INTO Films(Titre, Synopsis, Realisateur, Movie_ID, Type_video, Video_ID, maincharac, Relyear) VALUES (?, ?, ?, ?, ?, ?, ?, ?);');
+        $donnees->execute(array($_POST['Titre'], $_POST['Synopsis'], $_POST['Realisateur'], $_POST['Movie_ID'], $_POST['Type_video'], $_POST['Video_ID'], $_POST['maincharac'], $_POST['maincharac']));
+        echo "Film Ajoute !";
       }
       if($_POST['Type_video'] == 'Serie')
       {
-        $donnees = $bdd->prepare('INSERT INTO Series(Titre, Synopsis, Realisateur, Movie_ID, Type_video, Video_ID, maincharac,) VALUES (?, ?, ?, ?, ?, ?, ?, ?);');
-        $donnees->execute(array($_POST['Titre'], $_POST['Synopsis'], $_POST['Realisateur'], $_POST['Movie_ID'], $_POST['Type_video'], $_POST['Video_ID'], $_POST['maincharac']));
+        $donnees = $bdd->prepare('INSERT INTO Series(Titre, Synopsis, Realisateur, Movie_ID, Type_video, Video_ID, maincharac, Relyear) VALUES (?, ?, ?, ?, ?, ?, ?, ?);');
+        $donnees->execute(array($_POST['Titre'], $_POST['Synopsis'], $_POST['Realisateur'], $_POST['Movie_ID'], $_POST['Type_video'], $_POST['Video_ID'], $_POST['maincharac'], $_POST['Relyear']));
+        echo "Serie Ajoute !";
       }
     }
  ?>
@@ -68,9 +65,11 @@
         <label for="Video_ID">Lien Youtube</label><br>
         <input type="text" name="Video_ID" placeholder="Apres ?v=" class="iregi"><br><br>
 
+        <label for="Relyear">Date de sortie</label><br>
+        <input type="text" name="Relyear" placeholder="YYYY-MM-DD" class="iregi"><br><br>
+
         <label for="maincharac">Acteur Principaux</label><br>
         <input type="text" name="maincharac" class="iregi"><br><br>
-
 
         <input type="submit" name="sregi" value="Ajouter le contenu" class="sregi"></input>
       </form>

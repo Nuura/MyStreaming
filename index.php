@@ -43,14 +43,14 @@ else //Pas Connecté
   for($i = 0; count($result[$i]) >= $i; $i++)
   {
     echo "<div class=div>";
-  if($result[$i]['Type'] == '0')
+  if($result[$i]['Type_video'] == 'Film')
       {
         echo "<embed src=https://www.youtube.com/embed/".$result[$i]['Video_ID']."></embed>";
         echo "<img class=imgnews src=img/film/".$result[$i]['ID'].".jpg height=240>";
         echo "<h2 class=h2news>".$result[$i]['Titre']."</h2>";
         echo "<h5 class=fadenews>Type : Film </h5><br>";
       }
-  if($result[$i]['Type'] == '1')
+  if($result[$i]['Type_video'] == 'Serie')
       {
         echo "<embed src=https://www.youtube.com/embed/".$result[$i]['Video_ID']."></embed>";
         echo "<img class=imgnews src=img/serie/".$result[$i]['ID'].".jpg height=240>";
