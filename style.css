@@ -13,12 +13,11 @@
 }
 .mid {
   width: calc(100% - 312px);
-  width: 30%;
   height: 100px;
 }
 .search {
   width: 200px;
-
+  margin-top: 30px;
   height: 25px;
   border: 0px;
 }
