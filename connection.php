@@ -11,10 +11,10 @@ if(isset($_POST['sregi']))
 	    session_start();
 	    $_SESSION['pseudo'] = $_POST['username'];
             echo "Vous etes connecte ". $_SESSION['pseudo']."!";
+            header("refresh:2;url=index.php" );
           }
           else
             {
-	      echo sha1($_POST['password']);
               echo "Identifiants errones";
             }
     }
