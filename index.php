@@ -14,7 +14,7 @@ if(isset($_SESSION['pseudo'])) //Si connecté
     if($result['role'] == "1")
       echo "<a href=admin.php class=bregister>Panel Admin<br>".$_SESSION['pseudo']."</a>";
     echo "</div>";
-    echo "</div>";
+    echo "</div></body>";
         echo "Bonjour ".$_SESSION['pseudo'];
   }
 /*else if(isset($_SESSION['pseudo']) &&  $result['role'] == 1)
@@ -36,27 +36,33 @@ else //Pas Connecté
   $sql = "SELECT * FROM Films UNION SELECT * FROM Series ORDER BY RelYear DESC LIMIT 5";
   $requet = $bdd->query($sql);
   $result = $requet->fetchAll();
+/*  echo "<pre>";
+  var_dump($result);
+    echo "</pre>";*/
   echo "<div class=news><h2>Nouveautes</h2><br>";
   for($i = 0; count($result[$i]) >= $i; $i++)
   {
     echo "<div class=div>";
-    echo "<embed src=https://www.youtube.com/embed/".$result[$i]['Video_ID']."></embed>";
   if($result[$i]['Type'] == '0')
       {
+        echo "<embed src=https://www.youtube.com/embed/".$result[$i]['Video_ID']."></embed>";
         echo "<img class=imgnews src=img/film/".$result[$i]['ID'].".jpg height=240>";
         echo "<h2 class=h2news>".$result[$i]['Titre']."</h2>";
         echo "<h5 class=fadenews>Type : Film </h5><br>";
       }
   if($result[$i]['Type'] == '1')
       {
+        echo "<embed src=https://www.youtube.com/embed/".$result[$i]['Video_ID']."></embed>";
         echo "<img class=imgnews src=img/serie/".$result[$i]['ID'].".jpg height=240>";
         echo "<h2 class=h2news>".$result[$i]['Titre']."</h2>";
         echo "<h5 class=fadenews>Type : Serie </h5><br>";
       }
     echo "<h5 class=fadenews>Date de Sortie : ".$result[$i]['Relyear']."</h5><br>";
     echo "<h5 class=fadenews>Realisateur : ".$result[$i]['Realisateur']." </h5><br>";
+    echo "<h5 class=fadenews>Acteur : ".$result[$i]['maincharac']." </h5><br>";
     echo "<hr class=hrnews><br><br>";
-    echo "<h3 class=synopsisnews>Synopsis : ".$result[$i]['Synopsis']."</h3>";
+    echo "<h3 class=synopsisnews>Synopsis : ".$result[$i]['Synopsis']."</h3><br>";
+
     echo "</div><br>";
   }
   echo "</div>";
