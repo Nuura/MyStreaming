@@ -15,13 +15,7 @@ if(isset($_SESSION['pseudo'])) //Si connecté
       echo "<a href=admin.php class=bregister>Panel Admin<br>".$_SESSION['pseudo']."</a>";
     echo "</div>";
     echo "</div></body>";
-        echo "Bonjour ".$_SESSION['pseudo'];
   }
-/*else if(isset($_SESSION['pseudo']) &&  $result['role'] == 1)
-{
-  echo "haha";
-    echo "<a href=disconnect.php class=bregister>Deconnection</a>";
-}*/
 else //Pas Connecté
   {
     echo "<div class=account>";
@@ -33,12 +27,9 @@ else //Pas Connecté
   }
 
   $bdd = new PDO('mysql:host=localhost;dbname=Streaming;charset=utf8', 'root', 'root');
-  $sql = "SELECT * FROM Films UNION SELECT * FROM Series ORDER BY RelYear DESC LIMIT 5";
+  $sql = "SELECT * FROM Films UNION SELECT * FROM Series ORDER BY RelYear DESC LIMIT 4";
   $requet = $bdd->query($sql);
   $result = $requet->fetchAll();
-/*  echo "<pre>";
-  var_dump($result);
-    echo "</pre>";*/
   echo "<div class=news><h2>Nouveautes</h2><br>";
   for($i = 0; count($result[$i]) >= $i; $i++)
   {
